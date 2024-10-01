@@ -1,5 +1,8 @@
-// For compile: g++ -o json_test json_test.cpp 
-// For run: ./json_test
+// For compile and build:
+// mkdir -p ./bin && g++ -o ./bin/json_test json_test.cpp 
+
+// For run: 
+// ./bin/json_test
 
 // ###############################################
 // Include libraries:
@@ -22,8 +25,6 @@ json j ;
 
 int main() {
 
-
-
     // j["param1"] = "John";
     // j["param2"] = 30;
     // j["param33"] = 12.123;
@@ -31,12 +32,12 @@ int main() {
     // j["param5"] = {1, 2, "3", false};
     j = json::parse(R"({"param1":1, "param2":2})");
 
-    j = 
-    {
-        {"TYP", "MOTM"},
-        {"VALUE", {1,2,3,\
-        4,5,6,"HELLO", "NIKE"}}
-    };
+    // j = 
+    // {
+    //     {"TYP", "MOTM"},
+    //     {"VALUE", {1,2,3,\
+    //     4,5,6,"HELLO", "NIKE"}}
+    // };
     
     char txBuffer[1024];
     std::string s = j.dump();
